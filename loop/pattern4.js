@@ -1,20 +1,24 @@
-function pattern(n){
-    for (let row=1;row <= n;row+=1){
+function pattern(n) { 
+    for (let row = 1; row <= n; row += 1) {
+        let str = "";  // Initialize string for each row
+        let space = n - row;  // Calculate spaces to add
         
-            let str="";
-            let space= n - row;
-
+        // Add spaces
+        for (let j = 0; j < space; j++) {
+            str += " ";  // Append spaces to str
+        }
         
-        for(let j=0;row <= space;j++)
-            {
-                let str=" "}
-                let stars=2*row-1;
+        // Calculate stars
+        let stars = 2 * row - 1;
+        
+        // Add stars
+        for (let col = 1; col <= stars; col++) {
+            str += "*";  // Append stars to str
+        }
+        
+        // Print the row after spaces and stars
+        console.log(str);
+    }
+}
 
-            }
-            for(let col=1; col<=stars; col++)
-                {
-                    str+="*";
-                }
-                console.log(str);
-                }}
-pattern(8)
+pattern(8);
